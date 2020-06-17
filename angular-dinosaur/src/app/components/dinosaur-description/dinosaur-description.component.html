@@ -1,0 +1,46 @@
+<mat-card class="dinosaur-card">
+  <mat-card-header color="primary">
+    <mat-icon color="accent">science</mat-icon>
+    <mat-card-title>
+      {{dinosaurDescription.dinoName}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="p-1">
+  <img mat-card-image src="{{dinosaurDescription.dinoImg}}" alt="{{dinosaurDescription.dinoName}}">
+  </mat-card-content>
+  <mat-card-content>
+    <p>{{dinosaurDescription.dinoDescription}}</p>
+    <mat-divider [inset]="true"></mat-divider>
+  </mat-card-content>
+  <mat-card-content class="mb-2">
+    <span>Dino type: {{dinosaurDescription.dinoType}}</span>
+  </mat-card-content>
+  <mat-divider [inset]="true"></mat-divider>
+  <mat-card-content class="mt-1">
+    <h4>Geographic range limit</h4>
+    <ul>
+      <li *ngFor="let area of dinosaurDescription.dinoGeography">
+        <span>{{area}}</span>
+      </li>
+    </ul>
+    <mat-divider [inset]="true"></mat-divider>
+  </mat-card-content>
+  <mat-card-content>
+    <h4>Life periods</h4>
+    <ul>
+      <li *ngFor="let period of dinosaurDescription.dinoLifePeriods">
+        <span>{{period}}</span>
+      </li>
+    </ul>
+    <mat-divider [inset]="true"></mat-divider>
+  </mat-card-content>
+  <mat-card-content>
+    <h4>Dinosaur lived between</h4>
+    <p><span>{{dinosaurDescription.dinoAppeared}}</span> - <span>{{dinosaurDescription.dinoExtincted}} million years ago</span></p>
+  </mat-card-content>
+  <mat-card-content class="card-center">
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Back</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
