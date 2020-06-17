@@ -1,0 +1,25 @@
+{
+  "dinosaurs": [
+    {
+      "dinoName": "Diplodocus",
+      "dinoDescription": "Diplodocus is one of the more common dinosaur fossils found in the middle to upper Morrison Formation",
+      "dinoGeography": ["North America"],
+      "dinoAppeared": 240,
+      "dinoExtincted": 233,
+      "dinoLifePeriods": ["Jurassic", "Cretaceous"],
+      "dinoImg": "./../assets/images/diplodocus.png",
+      "dinoType": "mammal"
+    },
+    {
+      "dinoName": "Eoraptor",
+      "dinoDescription": "It was a small, lightly-built, basal saurischian dinosaur.",
+      "dinoGeography": ["South America"],
+      "dinoAppeared": 231,
+      "dinoExtincted": 228,
+      "dinoLifePeriods": ["Late Triassic"],
+      "dinoImg": "./../assets/images/eoraptor.png",
+      "dinoType": "raptor"
+    }
+  ]
+
+}

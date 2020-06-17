@@ -14,7 +14,11 @@ export class DinosaurDashboardComponent implements OnInit {
   constructor(private dinosaurDashboardService: DinosaurDashboardService ) { }
 
   ngOnInit(): void {
-    this.dinosaurs = this.dinosaurDashboardService.getDinosaurs();
+    this.dinosaurDashboardService
+      .getDinosaurs()
+      .subscribe((data:any)=>{
+      this.dinosaurs = data
+    });
   }
 
 }

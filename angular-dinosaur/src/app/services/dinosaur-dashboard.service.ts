@@ -1,37 +1,25 @@
 import {Injectable} from '@angular/core';
 import {DinosaurInterface} from "../models/dinosaur.interface";
+import {Observable} from "rxjs";
+import {HttpClient} from '@angular/common/http';
+import {map} from "rxjs/operators";
+
+const DINOSAUR_API: string='assets/db.json'
 
 @Injectable({
   providedIn: 'root'
 })
 export class DinosaurDashboardService {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
-  getDinosaurs(): DinosaurInterface[] {
-    return [
-      {
-        dinoName: 'Diplodocus',
-        dinoDescription: 'Diplodocus is one of the more common dinosaur fossils found in the middle to upper Morrison Formation',
-        dinoGeography: ['North America'],  //dropDown
-        dinoAppeared: 240,   // picker?
-        dinoExtincted: 233,
-        dinoLifePeriods: ['Jurassic', 'Cretaceous'],  // DropDown
-        dinoImg: './../assets/images/diplodocus.png',
-        dinoType: 'mammal', //mammal or raptor (radiobutton)
-      },
-      {
-        dinoName: 'Eoraptor',
-        dinoDescription: 'It was a small, lightly-built, basal saurischian dinosaur.',
-        dinoGeography: ['South America'],  //dropDown
-        dinoAppeared: 231,   // picker?
-        dinoExtincted: 228,
-        dinoLifePeriods: ['Late Triassic'],  // DropDown
-        dinoImg: './../assets/images/eoraptor.png',
-        dinoType: 'raptor', //mammal or raptor (radiobutton)
-      }
-    ]
+  getDinosaurs(): Observable<DinosaurInterface[]> {
+    return this.http
+      .get(DINOSAUR_API)
+      .pipe(map((response: Response) =>{
+        return response['dinosaurs']
+      }))
   }
 
 }

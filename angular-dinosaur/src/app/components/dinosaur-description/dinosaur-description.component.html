@@ -1,18 +1,18 @@
-<mat-card class="dinosaur-card">
-  <mat-card-header color="primary">
+<mat-card class="dinosaur-card mx-1 my-1">
+  <mat-card-header>
     <mat-icon color="accent">science</mat-icon>
     <mat-card-title>
       {{dinosaurDescription.dinoName}}
     </mat-card-title>
   </mat-card-header>
   <mat-card-content class="p-1">
-  <img mat-card-image src="{{dinosaurDescription.dinoImg}}" alt="{{dinosaurDescription.dinoName}}">
+  <img mat-card-image class="img-200" src="{{dinosaurDescription.dinoImg}}" alt="{{dinosaurDescription.dinoName}}">
   </mat-card-content>
-  <mat-card-content>
+  <mat-card-content class="min-height-80">
     <p>{{dinosaurDescription.dinoDescription}}</p>
-    <mat-divider [inset]="true"></mat-divider>
   </mat-card-content>
-  <mat-card-content class="mb-2">
+  <mat-divider [inset]="true"></mat-divider>
+  <mat-card-content class="mt-1">
     <span>Dino type: {{dinosaurDescription.dinoType}}</span>
   </mat-card-content>
   <mat-divider [inset]="true"></mat-divider>
@@ -27,7 +27,7 @@
   </mat-card-content>
   <mat-card-content>
     <h4>Life periods</h4>
-    <ul>
+    <ul class="min-height-80">
       <li *ngFor="let period of dinosaurDescription.dinoLifePeriods">
         <span>{{period}}</span>
       </li>
