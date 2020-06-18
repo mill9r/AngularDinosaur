@@ -11,6 +11,7 @@ import { DinosaurDescriptionComponent } from './components/dinosaur-description/
 import { HeaderBarComponent } from './components/header-bar/header-bar.component';
 import {DinosaurDashboardService} from "./services/dinosaur-dashboard.service";
 import { DinosaurDashboardComponent } from './containers/dinosaur-dashboard/dinosaur-dashboard.component';
+import { DinosaurDetailsComponent } from './containers/dinosaur-details/dinosaur-details.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DinosaurDashboardComponent } from './containers/dinosaur-dashboard/dino
     DinosaurDescriptionComponent,
     HeaderBarComponent,
     DinosaurDashboardComponent,
+    DinosaurDetailsComponent,
   ],
   imports: [
     BrowserModule,

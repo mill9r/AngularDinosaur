@@ -1,5 +1,5 @@
 .dinosaur-card{
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .card-center{
@@ -7,11 +7,17 @@
   justify-content: center;
 }
 
-.img-200{
-  height: 200px;
+
+.img-300{
+  height: 300px;
   width: 100%;
 }
 
 .min-height-80{
   min-height: 80px;
+}
+
+.dino-details-wrapper{
+  display: flex;
+  justify-content: center;
 }

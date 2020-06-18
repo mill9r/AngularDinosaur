@@ -4,7 +4,7 @@ import {Observable} from "rxjs";
 import {HttpClient} from '@angular/common/http';
 import {map} from "rxjs/operators";
 
-const DINOSAUR_API: string='assets/db.json'
+const DINOSAUR_API: string = 'assets/db.json'
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +17,28 @@ export class DinosaurDashboardService {
   getDinosaurs(): Observable<DinosaurInterface[]> {
     return this.http
       .get(DINOSAUR_API)
-      .pipe(map((response: Response) =>{
+      .pipe(map((response: Response) => {
         return response['dinosaurs']
       }))
+  }
+
+  getDinosaurById(id: number): Observable<DinosaurInterface> {
+    return this.http
+      .get(DINOSAUR_API)
+      .pipe(
+        map((response: Response) => {
+            return response['dinosaurs'].filter(dino => dino.id === id);
+          }
+        )
+      )
+  }
+
+  updateDinosaur(dinosaur: DinosaurInterface): Observable<DinosaurInterface[]> {
+    return this.http
+      .put(`${DINOSAUR_API}/${dinosaur.id}`, dinosaur)
+      .pipe(
+        map((response: Response) => response['dinosaurs'])
+      )
   }
 
 }

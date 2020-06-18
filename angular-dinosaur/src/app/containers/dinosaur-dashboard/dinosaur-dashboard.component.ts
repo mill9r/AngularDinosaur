@@ -16,7 +16,7 @@ export class DinosaurDashboardComponent implements OnInit {
   ngOnInit(): void {
     this.dinosaurDashboardService
       .getDinosaurs()
-      .subscribe((data:any)=>{
+      .subscribe((data:DinosaurInterface[])=>{
       this.dinosaurs = data
     });
   }

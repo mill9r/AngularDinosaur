@@ -1,4 +1,5 @@
 export interface DinosaurInterface {
+  id:number,
   dinoName: string,
   dinoDescription: string | null,
   dinoGeography: string[],
@@ -6,5 +7,5 @@ export interface DinosaurInterface {
   dinoExtincted: number,
   dinoLifePeriods: string[],
   dinoImg: string,
-  dinoType: string,
+  dinoType: boolean,
 }

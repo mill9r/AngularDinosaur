@@ -1,6 +1,7 @@
 {
   "dinosaurs": [
     {
+      "id": 1,
       "dinoName": "Diplodocus",
       "dinoDescription": "Diplodocus is one of the more common dinosaur fossils found in the middle to upper Morrison Formation",
       "dinoGeography": ["North America"],
@@ -8,9 +9,10 @@
       "dinoExtincted": 233,
       "dinoLifePeriods": ["Jurassic", "Cretaceous"],
       "dinoImg": "./../assets/images/diplodocus.png",
-      "dinoType": "mammal"
+      "dinoType": false
     },
     {
+      "id": 2,
       "dinoName": "Eoraptor",
       "dinoDescription": "It was a small, lightly-built, basal saurischian dinosaur.",
       "dinoGeography": ["South America"],
@@ -18,7 +20,51 @@
       "dinoExtincted": 228,
       "dinoLifePeriods": ["Late Triassic"],
       "dinoImg": "./../assets/images/eoraptor.png",
-      "dinoType": "raptor"
+      "dinoType": true
+    },
+    {
+      "id": 3,
+      "dinoName": "Triceratops",
+      "dinoDescription": "It is one of the last known non-avian dinosaur genera",
+      "dinoGeography": ["North America"],
+      "dinoAppeared": 68,
+      "dinoExtincted": 66,
+      "dinoLifePeriods": ["Cretaceous"],
+      "dinoImg": "./../assets/images/triceraptor.png",
+      "dinoType": true
+    },
+    {
+      "id": 4,
+      "dinoName": "Troodon",
+      "dinoDescription": "Troodon was one of the cleverest dinosaurs, having a large brain in proportion to its body weight. It was probably about as smart as a modern bird. ",
+      "dinoGeography": ["North America"],
+      "dinoAppeared": 77,
+      "dinoExtincted": 65,
+      "dinoLifePeriods": ["Cretaceous"],
+      "dinoImg": "./../assets/images/troodon.png",
+      "dinoType": true
+    },
+    {
+      "id": 5,
+      "dinoName": "Brachiosaurus",
+      "dinoDescription": "Brachiosaurus was a massive plant-eating dinosaur. Brachiosaurus was unusual among dinosaurs, in that its front legs were longer than its hind legs.",
+      "dinoGeography": ["North America"],
+      "dinoAppeared": 154,
+      "dinoExtincted": 140,
+      "dinoLifePeriods": ["Jurassic","Cretaceous"],
+      "dinoImg": "./../assets/images/brachiosaurus.png",
+      "dinoType": false
+    },
+    {
+      "id": 6,
+      "dinoName": "Iguanodon",
+      "dinoDescription": "Iguanodon must have been very widespread",
+      "dinoGeography": ["Europe", "North Africa", "Asia", "North America"],
+      "dinoAppeared": 135,
+      "dinoExtincted": 125,
+      "dinoLifePeriods": ["Cretaceous"],
+      "dinoImg": "./../assets/images/iguanodon.png",
+      "dinoType": false
     }
   ]
 
