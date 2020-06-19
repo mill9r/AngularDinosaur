@@ -1,0 +1,86 @@
+<div class="align-center">
+  <h3>Create a new dinosaur</h3>
+  <form #dinoForm="ngForm" novalidate class="form-size mt-2">
+    <mat-form-field class="input-full-width">
+      <mat-label>Dino id</mat-label>
+      <input type="number" matInput placeholder="Enter dino id" name="id" ngModel>
+    </mat-form-field>
+
+    <mat-form-field class="input-full-width">
+      <mat-label>Dino name</mat-label>
+      <input type="text" matInput placeholder="Enter dino name" name="dinoName" ngModel>
+    </mat-form-field>
+
+    <mat-form-field class="input-full-width">
+      <mat-label>Dino general Description</mat-label>
+      <textarea matInput name="dinoDescription" placeholder="Enter general description..." ngModel></textarea>
+    </mat-form-field>
+
+<!--    <mat-form-field class="input-full-width">-->
+<!--      <mat-label>Dino geography</mat-label>-->
+<!--      <mat-select name="dinoGeography" ngModel multiple>-->
+<!--        <mat-option>Select</mat-option>-->
+<!--        <mat-option *ngFor="let continent of metaDinoData?.continents" [value]="continent">{{continent}}</mat-option>-->
+<!--      </mat-select>-->
+<!--    </mat-form-field>-->
+
+    <section>
+      <label>Dino geography</label>
+      <div class="mt-1">
+        <select matNativeControl multiple name="dinoGeography" ngModel>
+          <option *ngFor="let continent of metaDinoData?.continents" [value]="continent">{{continent}}</option>
+        </select>
+      </div>
+    </section>
+
+    <mat-form-field class="input-full-width">
+      <mat-label>Dino appeared</mat-label>
+      <input matInput type="number" placeholder="Appeared mln years ago" name="dinoAppeared" ngModel>
+    </mat-form-field>
+
+    <mat-form-field class="input-full-width">
+      <mat-label>Dino extincted</mat-label>
+      <input matInput type="number" placeholder="Extinct mln years ago" name="dinoExtincted" ngModel>
+    </mat-form-field>
+
+    <section>
+      <span>Dino type: </span>
+      <label>
+        <input type="radio" [value]=true name="dinoType" ngModel> Raptor
+      </label>
+      <label>
+        <input type="radio" [value]=false name="dinoType" ngModel>Mammal
+      </label>
+
+    </section>
+
+    <mat-form-field class="input-full-width">
+      <mat-label>Dino image</mat-label>
+      <input matInput placeholder="Enter image name" name="dinoImg" ngModel>
+    </mat-form-field>
+
+<!--    <section class="example-section">-->
+<!--      <mat-label>Life periods:</mat-l>-->
+<!--      <mat-checkbox *ngFor="let periodlabe of metaDinoData?.historicalPeriods" name="{{period}}" ngModel-->
+<!--                    class="mx-1">{{period}}</mat-checkbox>-->
+<!--    </section>-->
+
+    <section>
+      <label>Life periods:</label>
+      <div class="mt-1">
+        <select matNativeControl multiple name="dinoLifePeriods" ngModel>
+          <option *ngFor="let period of metaDinoData?.historicalPeriods" value="{{period}}">{{period}}</option>
+        </select>
+      </div>
+    </section>
+
+    <mat-form-field class="input-full-width">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onSubmitForm(dinoForm)">Save</button>
+      </mat-card-actions>
+    </mat-form-field>
+
+  </form>
+
+</div>
+

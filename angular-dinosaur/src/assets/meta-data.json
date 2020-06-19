@@ -1,0 +1,18 @@
+{
+  "continents": [
+    "North America",
+    "South America",
+    "North Africa",
+    "South Africa",
+    "Europe",
+    "Asia",
+    "Australia",
+    "Oceania"
+  ],
+  "historicalPeriods" : [
+    "Triassic",
+    "Jurassic",
+    "Cretaceous",
+    "Tertiary"
+  ]
+}

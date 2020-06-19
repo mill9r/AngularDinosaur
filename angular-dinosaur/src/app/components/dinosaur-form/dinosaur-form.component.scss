@@ -1,0 +1,20 @@
+.form-size {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+.align-center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color:rgb(66, 134, 244);
+}
+

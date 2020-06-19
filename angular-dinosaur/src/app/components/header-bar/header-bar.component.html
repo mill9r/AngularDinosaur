@@ -1,3 +1,13 @@
 <mat-toolbar color="primary">
-  Dinosaur
+  <mat-toolbar-row>
+    <a routerLink="">
+      <mat-icon class="white">home</mat-icon>
+    </a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a routerLink="/dino-list" routerLinkActive="active" class="white">Dino list</a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a routerLink="/add-dino" routerLinkActive="active" class="white">Add dino</a>
+  </mat-toolbar-row>
 </mat-toolbar>

@@ -16,7 +16,7 @@ export class DinosaurDetailsComponent implements OnInit {
   constructor(private dinosaurDashboardService: DinosaurDashboardService, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = '2'   // this.router.snapshot.paramMap.get('id');
+    this.id =  this.router.snapshot.paramMap.get('id');
     this.dinosaurDashboardService
       .getDinosaurById(Number(this.id))
       .subscribe((data:DinosaurInterface) =>{
